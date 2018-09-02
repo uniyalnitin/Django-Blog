@@ -5,8 +5,15 @@
 </head>
 <body>
 	<div>
-	<h1 style="color: red;"><a href="/">Home</a>
-	It works!</h1>
+	<h1 style="color: red;"><a href="/">Home</a></h1>
+	<div>
+		{% for post in posts %}
+			<div>
+				<p>published: {{post.published_date }}</p>
+				<h1 style="color: blue;"><a href=""><u>{{ post.title }}</u></a></h1>
+				<p>{{ post.text|linebreaksbr }}</p>
+			</div>
+		{% endfor %}
 	</div>
 </body>
 </html>
