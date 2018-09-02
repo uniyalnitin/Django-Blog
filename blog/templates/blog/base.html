@@ -5,6 +5,9 @@
 <head>
 	<title>Nitin's Blog</title>
 	<div class="page-header">
+		{% if user.is_authenticated %}
+		<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+		{% endif %}
 	<h1><a href="/">Home</a></h1>
 	</div>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
